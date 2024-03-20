@@ -2,24 +2,23 @@
 
 function getArgsErrors(array $args): ?string
 {
-    $errors = '';
 
     if (count($args) !== 2) {
-        $errors .= "Command accepts exact two args\r\n";
+        return "Command accepts exact two args\r\n";
     }
 
     if (!is_numeric($args[0]) || !is_numeric($args[1])) {
-        $errors .= "Command accepts only numbers \r\n";
+        return "Command accepts only numbers \r\n";
     }
 
     $firstNumber = (float)$args[0];
     $secondNumber = (float)$args[1];
 
     if ($firstNumber > $secondNumber) {
-        $errors .= "Second arg should be greater then first \r\n";
+        return "Second arg should be greater then first \r\n";
     }
 
-    return $errors !== '' ? $errors : null;
+    return null;
 }
 
 function printFooBarOrNumbers(array $args): void
