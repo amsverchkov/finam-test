@@ -34,11 +34,11 @@ function printFooBarOrNumbers(array $args): void
     $stopNumber = $args[1];
 
     for ($i = $startNumber; $i <= $stopNumber; $i++) {
-        if ($i % 3 && $i % 5) {
+        if ($i % 3 === 0 && $i % 5 === 0) {
             echo "FooBar\r\n";
-        } elseif ($i % 3) {
+        } elseif ($i % 3 === 0) {
             echo "Foo\r\n";
-        } elseif ($i % 5) {
+        } elseif ($i % 5 === 0) {
             echo "Bar\r\n";
         } else {
             echo "{$i}\r\n";
