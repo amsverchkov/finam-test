@@ -3,5 +3,5 @@
 
 interface IMessageHandler
 {
-    public function send(BaseMessage $baseMessage);
+    public function send(BaseMessage $baseMessage): void;
 }

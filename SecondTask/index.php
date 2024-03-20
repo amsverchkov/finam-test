@@ -1,4 +1,5 @@
 <?php
+
 $messageHandler = new EmailMessage\EmailMessageHandler();
 $message = new EmailMessage\EmailMessage();
 $message->message = 'test';
