@@ -1,6 +1,6 @@
 <?php
 
-function getArgsErrors($args): ?string
+function getArgsErrors(array $args): ?string
 {
     $errors = '';
 
@@ -22,7 +22,7 @@ function getArgsErrors($args): ?string
     return $errors !== '' ? $errors : null;
 }
 
-function printFooBarOrNumbers($args): void
+function printFooBarOrNumbers(array $args): void
 {
 
     $errors = getArgsErrors($args);
